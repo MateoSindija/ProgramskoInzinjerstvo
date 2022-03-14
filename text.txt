@@ -7,3 +7,5 @@ Jos nekih promjena
 
 
 Nova promjena na grani
+
+Promjena na remote
