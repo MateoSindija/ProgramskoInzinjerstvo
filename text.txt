@@ -1,4 +1,4 @@
-Prvi commit
+Prvi commit i nova grana
 
 Neke promjene
 
