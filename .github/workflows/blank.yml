@@ -1,0 +1,15 @@
+name: workflow
+on: 
+	issues: 
+		types: 
+      -opened
+
+  labels: 
+		types: 
+      -created
+    
+jobs: 
+	if: ${{ github.ref == 'refs/heads/main' }}
+	runs-on: ubuntu-latest
+	steps: 
+		- run:  echo 'Trigger ${{github.event_name}}, user - ${{github.actor}}, date - ${{date +%d-%m-%Y}}' 
