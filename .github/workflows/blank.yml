@@ -1,15 +1,12 @@
-name: workflow
+name: ovo je bas super
 on: 
-	issues: 
-		types: 
-      -opened
-
-  labels: 
-		types: 
-      -created
-    
+  issues: 
+    types: [closed]
 jobs: 
-	if: ${{ github.ref == 'refs/heads/main' }}
-	runs-on: ubuntu-latest
-	steps: 
-		- run:  echo 'Trigger ${{github.event_name}}, user - ${{github.actor}}, date - ${{date +%d-%m-%Y}}' 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: github-update-readme
+      uses: theboi/github-update-readme@v1.3.0
+      with:
+        header: "latest issue closed by ${{github.actor}}"
