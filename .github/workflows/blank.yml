@@ -8,5 +8,8 @@ jobs:
     steps:
     - name: github-update-readme
       uses: theboi/github-update-readme@v1.3.0
+      env: 
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}} 
       with:
         header: "latest issue closed by ${{github.actor}}"
+        
